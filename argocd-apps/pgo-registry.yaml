@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: crunchy-oci
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+stringData:
+  type: helm
+  name: crunchy
+  url: registry.developers.crunchydata.com/crunchydata
+  enableOCI: "true"
