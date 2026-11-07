@@ -1,3 +1,10 @@
 image:
   repository: lizakalinichenko/spring-petclinic
   tag: "2-8001d31"
+replicaCount: 1
+service:
+  port: 80
+ingress:
+  host: petclinic.localhost
+db:
+  secretName: petclinic-db-pguser-petclinic
