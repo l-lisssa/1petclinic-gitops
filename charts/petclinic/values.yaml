@@ -1,6 +1,6 @@
 image:
   repository: lizakalinichenko/spring-petclinic
-  tag: "3-e806cdb"
+  tag: "4-f342b9d"
 replicaCount: 1
 service:
   port: 80
