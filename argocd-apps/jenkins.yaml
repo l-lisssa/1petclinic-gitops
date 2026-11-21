@@ -13,15 +13,7 @@ spec:
       valuesObject:
         controller:
           ingress:
-            enabled: true
-            ingressClassName: nginx
-            hostName: jenkins.localhost
-            annotations:
-              cert-manager.io/cluster-issuer: ca-issuer
-            tls:
-              - secretName: jenkins-tls
-                hosts:
-                  - jenkins.localhost
+            enabled: false
           resources:
             requests:
               cpu: 250m
