@@ -7,6 +7,16 @@ resource "helm_release" "argocd" {
   chart      = "argo-cd"
   version    = var.argocd_chart_version
 
+  values = [
+    yamlencode({
+      configs = {
+        params = {
+          "server.insecure" = true
+        }
+      }
+    })
+  ]
+
   timeout = 600
   wait    = true
 }
