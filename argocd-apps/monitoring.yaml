@@ -19,6 +19,12 @@ spec:
             ingressClassName: nginx
             hosts:
               - grafana.localhost
+            annotations:
+              cert-manager.io/cluster-issuer: ca-issuer
+            tls:
+              - secretName: grafana-tls
+                hosts:
+                  - grafana.localhost
         prometheus:
           prometheusSpec:
             retention: 2d
